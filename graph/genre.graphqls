@@ -1,0 +1,5 @@
+type Genre{
+    id: Int!
+    genre_name: String!
+    games: [Game!]
+}

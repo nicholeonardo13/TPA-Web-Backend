@@ -1,0 +1,5 @@
+type Developer {
+    id: Int!
+    developer_name: String!
+    games: [Game!]
+}

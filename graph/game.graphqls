@@ -1,0 +1,23 @@
+type Game {
+    id: Int!
+    title: String!
+    genres: [Genre!]
+    tag: String!
+    price: Int!
+    rating: Int!
+    discount: Int!
+    description: String!
+    developers: [Developer!]
+    publisher: Publisher!
+    publisher_id: Int!
+    release_date: Time!
+    picture: String!
+    banner: String!
+    system: String!
+}
+
+extend type Query {
+    games:[Game!]!
+    gamesByGenre(genre:String):[Game]!
+    gameByTitle(title:String): Game!
+}

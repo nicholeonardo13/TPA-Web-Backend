@@ -1,0 +1,11 @@
+type Otp {
+    id: Int!
+    code: String!
+    email: String!
+    country_region: Int!
+    valid_time: Time!
+}
+
+extend type Mutation {
+createOtp(email:String , country_region:Int): String!
+}

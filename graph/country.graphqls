@@ -1,0 +1,9 @@
+
+type Country {
+    id: Int!
+    country_name: String!
+}
+
+extend type Query {
+    countries: [Country!]!
+}

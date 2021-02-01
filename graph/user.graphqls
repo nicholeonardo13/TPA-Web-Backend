@@ -1,0 +1,23 @@
+scalar Time
+
+type User {
+    id: Int!
+    username: String!
+    email: String!
+    password: String!
+    country_region: Int!
+    money: Int!
+    create_at: Time!
+    updated_at: Time!
+    deleted_at: Time
+}
+
+type Query {
+    users: [User!]!
+    user: User!
+}
+
+type Mutation {
+    login(username:String , password:String): String!
+    register(username:String , password: String , otp_code:String): String!
+}
